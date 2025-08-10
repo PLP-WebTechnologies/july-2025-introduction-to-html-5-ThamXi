@@ -1,153 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <!-- SEO -->
-  <title>My Assignment — Accessible Semantic HTML Example</title>
-  <meta name="description" content="A single-file example demonstrating semantic HTML5 structure, accessibility best practices, and SEO-friendly metadata.">
-  <link rel="canonical" href="https://example.com/index.html">
-
-  <!-- Open Graph / Twitter (improves link previews) -->
-  <meta property="og:title" content="My Assignment — Accessible Semantic HTML Example">
-  <meta property="og:description" content="Semantic HTML5, accessibility enhancements, and SEO-friendly metadata in one file.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/index.html">
-  <meta property="og:image" content="https://example.com/preview.png">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Robots: allow indexing by default; change to "noindex" if private -->
-  <meta name="robots" content="index, follow">
-
-  <!-- JSON-LD structured data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "My Assignment — Accessible Semantic HTML Example",
-    "description": "A single-file example demonstrating semantic HTML5 structure, accessibility best practices, and SEO-friendly metadata."
-  }
-  </script>
-
-  <style>
-    /* Minimal styling to make structure visible while remaining accessible */
-    :focus { outline: 3px solid Highlight; outline-offset: 2px; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height: 1.5; margin: 0; padding: 0 1rem; color: #111; }
-    header, nav, main, article, section, aside, footer { padding: 1rem 0; }
-    header { border-bottom: 1px solid #ddd; }
-    nav ul { display:flex; gap:1rem; list-style:none; padding:0; margin:0; }
-    .container { max-width:900px; margin: 0 auto; }
-    .hero { padding: 1rem 0; }
-    .card { border:1px solid #eee; padding: 1rem; border-radius: 8px; background:#fafafa; }
-    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-    footer { border-top: 1px solid #ddd; font-size:0.9rem; color:#444; padding-bottom:2rem; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 Assignment</title>
+  <meta name="description" content="An example HTML5 page with proper semantic structure, accessibility, and SEO-friendly metadata.">
 </head>
 <body>
-  <!-- Skip link for keyboard users -->
-  <a class="sr-only" href="#main-content">Skip to main content</a>
 
-  <header class="container" role="banner">
-    <div class="hero" aria-hidden="false">
-      <h1 id="site-title">My Assignment — Semantic & Accessible HTML</h1>
-      <p class="lede">A single-file demo showing semantic structure, accessibility, and SEO-friendly metadata.</p>
-    </div>
-
-    <nav role="navigation" aria-label="Primary navigation">
+  <header>
+    <h1>Accessible Semantic HTML Assignment</h1>
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="#overview">Overview</a></li>
-        <li><a href="#sample-article">Sample Article</a></li>
+        <li><a href="#article">Sample Article</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content" class="container" role="main" aria-labelledby="site-title">
-    <!-- Semantic article -->
-    <article aria-labelledby="overview-heading" class="card" id="overview">
-      <header>
-        <h2 id="overview-heading">Overview</h2>
-        <p>Short summary of what this page demonstrates: semantic HTML, accessibility, and SEO best practices.</p>
-      </header>
+  <main>
+    <section id="overview" aria-labelledby="overview-heading">
+      <h2 id="overview-heading">Overview</h2>
+      <p>This page demonstrates HTML5 semantic structure with proper headings, accessibility, and SEO-friendly metadata.</p>
 
-      <section aria-labelledby="why-section">
-        <h3 id="why-section">Why semantic HTML?</h3>
-        <p>Semantic elements help browsers, assistive technologies, and search engines understand page structure.</p>
-      </section>
+      <article aria-labelledby="why-html5">
+        <h3 id="why-html5">Why Use Semantic HTML?</h3>
+        <p>Semantic HTML helps browsers, assistive technologies, and search engines understand your content better.</p>
+      </article>
 
-      <section aria-labelledby="how-section">
-        <h3 id="how-section">How this file is organized</h3>
+      <article aria-labelledby="page-structure">
+        <h3 id="page-structure">Page Structure</h3>
         <ol>
-          <li>Header & navigation</li>
-          <li>Main article content with sections</li>
+          <li>Header with navigation</li>
+          <li>Main content sections</li>
           <li>Accessible contact form</li>
-          <li>Footer with helpful links</li>
+          <li>Footer with information</li>
         </ol>
-      </section>
-    </article>
+      </article>
+    </section>
 
-    <!-- Example article with image (alt text included) -->
-    <article id="sample-article" class="card" aria-labelledby="sample-heading">
-      <h2 id="sample-heading">Sample Article: Accessible Image</h2>
+    <section id="article" aria-labelledby="article-heading">
+      <h2 id="article-heading">Sample Article</h2>
       <figure>
-        <img src="https://via.placeholder.com/800x300.png?text=Example+Image" alt="Decorative example showing layout; replace with meaningful alt text" width="800" height="300">
-        <figcaption>Figure 1: Example placeholder image (replace with real content).</figcaption>
+        <img src="https://via.placeholder.com/800x300" alt="Placeholder image with 800 by 300 dimensions">
+        <figcaption>Figure 1: Example placeholder image (replace with meaningful content).</figcaption>
       </figure>
+      <p>This is where the sample article text goes. Headings are used in order without skipping levels.</p>
 
-      <section aria-labelledby="content-section">
-        <h3 id="content-section">Content Section</h3>
-        <p>Write your article content here. Use headings in order and keep the document structure logical (don’t skip heading levels).</p>
-      </section>
-
-      <aside aria-labelledby="related-heading">
-        <h3 id="related-heading">Related</h3>
-        <p>Links to related resources or notes can go in an aside.</p>
+      <aside aria-labelledby="related-links">
+        <h3 id="related-links">Related Links</h3>
+        <ul>
+          <li><a href="#">Semantic HTML Guide</a></li>
+          <li><a href="#">Accessibility Basics</a></li>
+        </ul>
       </aside>
-    </article>
+    </section>
 
-    <!-- Accessible contact form -->
-    <section id="contact" class="card" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact / Feedback</h2>
-      <form action="#" method="post" novalidate aria-describedby="form-instructions">
-        <p id="form-instructions">Use this form to test accessible labels and required fields. (This form is a demo and does not submit anywhere.)</p>
-
-        <div>
-          <label for="name">Name <span aria-hidden="true">*</span></label>
-          <input id="name" name="name" type="text" required aria-required="true" placeholder="Your full name">
-        </div>
-
-        <div>
-          <label for="email">Email <span aria-hidden="true">*</span></label>
-          <input id="email" name="email" type="email" required aria-required="true" placeholder="you@example.com" aria-describedby="email-help">
-          <small id="email-help">We'll only use this to contact you about this assessment.</small>
-        </div>
-
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
-        </div>
-
-        <div>
-          <button type="submit">Send feedback</button>
-        </div>
-
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="name">Name:</label><br>
+          <input id="name" name="name" type="text" required>
+        </p>
+        <p>
+          <label for="email">Email:</label><br>
+          <input id="email" name="email" type="email" required>
+        </p>
+        <p>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
     </section>
   </main>
 
-  <footer class="container" role="contentinfo">
-    <p>© <time datetime="2025-08-09">2025</time> Your Name or Project. <a href="#site-title">Back to top</a></p>
-    <nav aria-label="Footer">
+  <footer>
+    <p>&copy; <time datetime="2025">2025</time> Sorry for my late submission.</p>
+    <nav aria-label="Footer navigation">
       <ul>
-        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Accessibility</a></li>
       </ul>
     </nav>
   </footer>
 
-  <noscript>
-    <div role="alert">This site works best with JavaScript enabled. The content is still readable without JavaScript.</div>
-  </noscript>
 </body>
 </html>
